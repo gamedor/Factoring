@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Factoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <div class="container">
+
+        <h1>Calculadora de Factoring</h1>
+        <p class="subtitle">
+            Compara una inversión en factoring contra una cuenta de ahorro.
+        </p>
+
+        <div class="card">
+
+            <label for="capital">Capital a invertir (S/)</label>
+            <input type="number" id="capital" value="1000" min="0" step="0.01">
+
+            <label for="tasa">Retorno anual del factoring (%)</label>
+            <input type="number" id="tasa" value="9.25" min="0" step="0.01">
+
+            <label for="dias">Días que estará invertido</label>
+            <input type="number" id="dias" value="67" min="1" step="1">
+
+            <label for="trea">TREA de la cuenta de ahorro (%)</label>
+            <input type="number" id="trea" value="3.60" min="0" step="0.01">
+
+            <button onclick="calcular()">CALCULAR</button>
+
+        </div>
+
+        <div id="resultado" class="resultado oculto">
+
+            <h2 id="decision"></h2>
+
+            <div class="dato">
+                <span>Capital</span>
+                <strong id="capitalResultado"></strong>
+            </div>
+
+            <div class="dato">
+                <span>Ganancia factoring</span>
+                <strong id="gananciaFactoring"></strong>
+            </div>
+
+            <div class="dato">
+                <span>Ganancia ahorro</span>
+                <strong id="gananciaAhorro"></strong>
+            </div>
+
+            <div class="dato destacado">
+                <span>Diferencia</span>
+                <strong id="diferencia"></strong>
+            </div>
+
+            <div class="dato">
+                <span>Rendimiento factoring en el período</span>
+                <strong id="rendimientoFactoring"></strong>
+            </div>
+
+            <div class="dato">
+                <span>Tasa anual de equilibrio</span>
+                <strong id="tasaEquilibrio"></strong>
+            </div>
+
+            <p class="explicacion" id="explicacion"></p>
+
+        </div>
+
+        <p class="nota">
+            Esta calculadora realiza una comparación matemática aproximada.
+            No considera riesgo de crédito, impuestos, comisiones ni posibles
+            retrasos en el pago del factoring.
+        </p>
+
+    </div>
+
+    <script src="calculadora.js"></script>
+
+</body>
+</html>
